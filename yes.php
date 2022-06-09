@@ -1,11 +1,11 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("blue","__________GOJEK AUTOCLAIM BY FATIH V1.0__________ \n");
-echo color("blue","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("blue","[+]  Recode  By: YT FATIH\n");
-echo color("blue","[+]  Masukin OTP pake 62xxxxxxxxx ya \n");
-echo color("blue","____________________________________________________\n");
+echo color("green","__________GOJEK AUTOCLAIM BY FATIH V1.0__________ \n");
+echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("green","[+]  Recode  By: FATIH\n");
+echo color("green","[+]  Masukin OTP pake 62xxxxxxxxx ya \n");
+echo color("green","____________________________________________________\n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
