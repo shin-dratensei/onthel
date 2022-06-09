@@ -4,7 +4,7 @@ include "function.php";
 echo color("green","__________GUOJEK KEJEJEK BY FATIH V1.0__________ \n");
 echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("green","[+]  Recode  By: FATIH\n");
-echo color("green","[+]  Lebokno OTP awalan 62xx ya \n");
+echo color("green","[+]  Lebokno NOMER awalan 62xx yo!!! \n");
 echo color("green","____________________________________________________\n");
 function change(){
         $nama = nama();
