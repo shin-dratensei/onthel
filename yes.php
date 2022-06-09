@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","__________GOJEK AUTOCLAIM BY FATIH V1.0__________ \n");
+echo color("green","__________GUOJEK KEJEJEK BY FATIH V1.0__________ \n");
 echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("green","[+]  Recode  By: FATIH\n");
 echo color("green","[+]  Masukin OTP pake 62xxxxxxxxx ya \n");
