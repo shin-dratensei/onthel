@@ -4,35 +4,35 @@ include "function.php";
 echo color("green","__________GUOJEK KEJEJEK BY FATIH V1.0__________ \n");
 echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("green","[+]  Recode  By: FATIH\n");
-echo color("green","[+]  Masukin OTP pake 62xxxxxxxxx ya \n");
+echo color("green","[+]  Lebokno OTP awalan 62xx ya \n");
 echo color("green","____________________________________________________\n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","(+) Masukin OTP : ");
+        echo color("nevy","(+) Ketiken nomere : ");
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("green","+] Kode verifikasi sudah di kirim")."\n";
+        echo color("green","+] Deloken notif ono sms bos ")."\n";
         otp:
         echo color("nevy","?] Otp: ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","+] Berhasil mendaftar");
+        echo color("green","+] wih mantap sukses ndaftar");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("yellow","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo "\n".color("nevy","?] langsung klaim voucher e bos?: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GORIDE 8K");
+        echo "\n".color("yellow","!] Claim voc GORIDE ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -46,7 +46,7 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         gocar:
-        echo "\n".color("yellow","!] Claim voc GOFOOD 15+10+5");
+        echo "\n".color("yellow","!] Claim voc GOFOOD ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -70,7 +70,7 @@ function change(){
         echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
-        echo "\n".color("yellow","!] Claim voc GOCAR pot 14K");
+        echo "\n".color("yellow","!] Claim voc GOCAR");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -127,14 +127,14 @@ function change(){
          goto setpin;
          }
          }else{
-         echo color("red","-] Otp yang anda input salah");
+         echo color("red","-] Otp SALAH WEY");
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
          }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
+         echo color("red","WADUH NOMOR SUDAH TERDAFTAR/SALAH !!!");
+         echo "\nbalenono (y/n): ";
          $pilih = trim(fgets(STDIN));
          if($pilih == "y" || $pilih == "Y"){
          echo "\n==============Register==============\n";
