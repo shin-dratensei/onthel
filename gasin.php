@@ -109,6 +109,12 @@ function change(){
             }
             else{
                 echo "\e[+] ".$claim."\n";
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR14"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("green","+] Message: ".$message);
+        sleep(1);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
@@ -151,4 +157,26 @@ function change(){
          }
          }
          }
+         }else{
+         goto setpin;
+         }
+         }else{
+         echo color("red","-] Otp yang anda input salah");
+         echo"\n==================================\n\n";
+         echo color("yellow","!] Silahkan input kembali\n");
+         goto otp;
+         }
+         }else{
+         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
+         echo "\nMau ulang? (y/n): ";
+         $pilih = trim(fgets(STDIN));
+         if($pilih == "y" || $pilih == "Y"){
+         echo "\n==============Register==============\n";
+         goto ulang;
+         }else{
+         echo "\n==============Register==============\n";
+         goto ulang;
+  }
+ }
+}
 echo change()."\n"; ?>
