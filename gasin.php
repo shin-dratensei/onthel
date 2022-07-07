@@ -150,8 +150,4 @@ function change(){
          }
          }
          }
-         
-  }
- }
-}
 echo change()."\n"; ?>
