@@ -6,7 +6,7 @@ echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("green","[+]  Recode  By: FATIH Surabaya\n");
 echo color("green","[+]  Lebokno NOMER awalan 62xx yo!!! \n");
 echo color("green","____________________________________________________\n");
-function change(){
+function change()
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
