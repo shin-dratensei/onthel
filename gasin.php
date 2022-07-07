@@ -36,6 +36,7 @@ function change(){
         echo "\n".color("yellow","!] sek entenono");
         echo "\e[!] Trying to redeem Voucher : GOFOODSANTAI19 !\n";
         sleep(3);
+        }
         $claim = claim($verif);
         if ($claim == false)
             {
