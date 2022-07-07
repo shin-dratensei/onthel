@@ -176,7 +176,7 @@ function change(){
          }
          }
          }
-         }else{
+         }
          goto setpin;
          }
          }else{
