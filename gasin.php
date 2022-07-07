@@ -102,7 +102,7 @@ function change(){
         echo "\n".color("yellow","!] sek entenono");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(20);
+        sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR14"}');
         $message = fetch_value($code1,'"sukses bos":"','"');
