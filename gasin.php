@@ -6,7 +6,7 @@ echo color("green","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("green","[+]  Recode  By: FATIH Surabaya\n");
 echo color("green","[+]  Lebokno NOMER awalan 62xx yo!!! \n");
 echo color("green","____________________________________________________\n");
-function change()
+function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
@@ -103,7 +103,6 @@ function change()
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
-        }
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR14"}');
         $message = fetch_value($code1,'"sukses bos":"','"');
